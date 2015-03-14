@@ -1,12 +1,9 @@
 package pt.c01interfaces.s01knowledge.s02app.actors;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.List;
 
 import pt.c01interfaces.s01knowledge.s01base.impl.BaseConhecimento;
 import pt.c01interfaces.s01knowledge.s01base.inter.IBaseConhecimento;
