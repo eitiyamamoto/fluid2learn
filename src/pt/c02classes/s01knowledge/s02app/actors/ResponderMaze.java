@@ -69,6 +69,7 @@ public class ResponderMaze implements IResponder {
 			      case ' ': resposta = "passagem"; break;
 			      case 'E': resposta = "entrada"; break;
 			      case 'S': resposta = "saida"; break;
+			      case 'X': resposta = "visitado"; break;
 			   }
 		   }
 		}
@@ -91,9 +92,11 @@ public class ResponderMaze implements IResponder {
 			mazeMatrix[novaLinha*nColunas+novaColuna] == '#')
 			movimento = false;
 		else {
+			mazeMatrix[linhaAtual*nColunas+colunaAtual] = 'X';
 			linhaAtual = novaLinha;
 			colunaAtual = novaColuna;
 		}
+		
 		return movimento;
 	}
 
