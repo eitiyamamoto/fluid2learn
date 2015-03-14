@@ -1,12 +1,11 @@
 package pt.c02classes.s01knowledge.s02app.actors;
 
-import java.util.Scanner;
+// import java.util.Scanner;
 
 import pt.c02classes.s01knowledge.s01base.inter.IEnquirer;
 import pt.c02classes.s01knowledge.s01base.inter.IResponder;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class EnquirerMaze implements IEnquirer {
 	
