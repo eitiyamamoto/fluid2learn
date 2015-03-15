@@ -26,6 +26,8 @@ public class EnquirerAnimals implements IEnquirer {
         IBaseConhecimento bc = new BaseConhecimento();
         IObjetoConhecimento obj;
 		
+        bc.setScenario("animals");
+        
         listaNomes = new ArrayList<String>(Arrays.asList(bc.listaNomes()));
         Collections.shuffle(listaNomes);
         
