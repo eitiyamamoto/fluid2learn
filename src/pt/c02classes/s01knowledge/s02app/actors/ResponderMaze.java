@@ -10,6 +10,7 @@ import pt.c02classes.s01knowledge.s01base.inter.IStatistics;
 public class ResponderMaze implements IResponder {
 	private IObjetoConhecimento obj;
 	
+	
     private char mazeMatrix[];
 	private int nLinhas = 0, nColunas = 0;
 	private int linhaAtual = 0, colunaAtual = 0;
@@ -69,6 +70,7 @@ public class ResponderMaze implements IResponder {
 			      case ' ': resposta = "passagem"; break;
 			      case 'E': resposta = "entrada"; break;
 			      case 'S': resposta = "saida"; break;
+			      case 'X': resposta = "visitado"; break;
 			   }
 		   }
 		}
@@ -91,9 +93,11 @@ public class ResponderMaze implements IResponder {
 			mazeMatrix[novaLinha*nColunas+novaColuna] == '#')
 			movimento = false;
 		else {
+			mazeMatrix[linhaAtual*nColunas+colunaAtual] = 'X';
 			linhaAtual = novaLinha;
 			colunaAtual = novaColuna;
 		}
+		
 		return movimento;
 	}
 
