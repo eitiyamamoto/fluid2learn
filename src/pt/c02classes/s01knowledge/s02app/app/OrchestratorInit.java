@@ -43,49 +43,16 @@ public class OrchestratorInit {
 			//Caso tenha selecionado uma das opções que leva ao jogo, então este é executado
 			// e a option é reininciada para nova consulta;
 			if(option == 'A' || option == 'a'){
-				animalsInit();
+				Orchestrator.main(args);
 				option = '0';
 			} else if(option == 'M' || option == 'm'){
-				mazeInit();
+				try {
+					OrchestratorInteractive.main(args);
+				} catch (IOException e) {
+					System.out.println("Erro ao ler entrada!");
+				}
 				option = '0';
 			}
 		}
-	}
-	
-	//Inicializa o jogo animals;
-	private static void animalsInit(){
-		IEnquirer enq;
-		IResponder resp;
-		IStatistics stat;
-		
-		IBaseConhecimento base = new BaseConhecimento();
-
-		base.setScenario("animals");
-		String listaAnimais[] = base.listaNomes();
-        for (int animal = 0; animal < listaAnimais.length; animal++) {
-			System.out.println("Enquirer com " + listaAnimais[animal] + "...");
-			stat = new Statistics();
-			resp = new ResponderAnimals(stat, listaAnimais[animal]);
-			enq = new EnquirerAnimals();
-			enq.connect(resp);
-			enq.discover();
-			System.out.println("----------------------------------------------------------------------------------------\n");
-        }
-	}
-	
-	//Inicializa o jogo Maze
-	private static void mazeInit(){
-		IEnquirer enq;
-		IResponder resp;
-		IStatistics stat;
-		
-		System.out.println("Enquirer com Mordor...");
-		stat = new Statistics();
-		resp = new ResponderMaze(stat, "mordor");
-		enq = new EnquirerMaze();
-		enq.connect(resp);
-		enq.discover();
-		System.out.println("----------------------------------------------------------------------------------------\n");
-		
 	}
 }
