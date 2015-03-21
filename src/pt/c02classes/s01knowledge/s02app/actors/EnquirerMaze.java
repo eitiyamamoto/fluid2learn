@@ -7,24 +7,24 @@ import pt.c02classes.s01knowledge.s01base.inter.IResponder;
 import java.util.ArrayList;
 
 public class EnquirerMaze implements IEnquirer {
-	
-	public class Caminho {
-		ArrayList<String> bifurcacao;
-		String movProx;
-		
-		Caminho () {
-			movProx = null;
-			bifurcacao = new ArrayList<String> ();
-		}
-	}
 
-	IResponder responder;
+	private IResponder responder;
 	
 	public void connect(IResponder responder) {
 		this.responder = responder;
 	}
 	
 	public boolean discover() {
+		
+		class Caminho {
+			ArrayList<String> bifurcacao;
+			String movProx;
+			
+			Caminho () {
+				movProx = null;
+				bifurcacao = new ArrayList<String> ();
+			}
+		}
 		
 		ArrayList <Caminho> caminho = new ArrayList<Caminho> ();
 		Caminho movimento = new Caminho();
