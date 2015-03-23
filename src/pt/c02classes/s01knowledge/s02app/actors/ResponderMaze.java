@@ -4,10 +4,9 @@ import pt.c02classes.s01knowledge.s01base.impl.BaseConhecimento;
 import pt.c02classes.s01knowledge.s01base.inter.IBaseConhecimento;
 import pt.c02classes.s01knowledge.s01base.inter.IDeclaracao;
 import pt.c02classes.s01knowledge.s01base.inter.IObjetoConhecimento;
-import pt.c02classes.s01knowledge.s01base.inter.IResponder;
 import pt.c02classes.s01knowledge.s01base.inter.IStatistics;
 
-public class ResponderMaze implements IResponder {
+public class ResponderMaze extends ResponderGeneric {
 	private IObjetoConhecimento obj;
 	
 	

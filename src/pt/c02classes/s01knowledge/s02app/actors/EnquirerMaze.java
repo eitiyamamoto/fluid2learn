@@ -1,12 +1,9 @@
 package pt.c02classes.s01knowledge.s02app.actors;
 
 
-import pt.c02classes.s01knowledge.s01base.inter.IEnquirer;
-import pt.c02classes.s01knowledge.s01base.inter.IResponder;
-
 import java.util.ArrayList;
 
-public class EnquirerMaze implements IEnquirer {
+public class EnquirerMaze extends EnquirerGeneric {
 	
 	public class Caminho {
 		ArrayList<String> bifurcacao;
@@ -16,12 +13,6 @@ public class EnquirerMaze implements IEnquirer {
 			movProx = null;
 			bifurcacao = new ArrayList<String> ();
 		}
-	}
-
-	IResponder responder;
-	
-	public void connect(IResponder responder) {
-		this.responder = responder;
 	}
 	
 	public boolean discover() {

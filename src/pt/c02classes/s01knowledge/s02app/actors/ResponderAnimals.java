@@ -7,10 +7,9 @@ import pt.c02classes.s01knowledge.s01base.impl.Statistics;
 import pt.c02classes.s01knowledge.s01base.inter.IBaseConhecimento;
 import pt.c02classes.s01knowledge.s01base.inter.IDeclaracao;
 import pt.c02classes.s01knowledge.s01base.inter.IObjetoConhecimento;
-import pt.c02classes.s01knowledge.s01base.inter.IResponder;
 import pt.c02classes.s01knowledge.s01base.inter.IStatistics;
 
-public class ResponderAnimals implements IResponder
+public class ResponderAnimals extends ResponderGeneric
 {
 	private String animal;
 	private IObjetoConhecimento obj;

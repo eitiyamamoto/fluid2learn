@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_CbG04M9yEeSP_vYA8G19Dg" name="Model">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_CbG04c9yEeSP_vYA8G19Dg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_DgRtMM9yEeSP_vYA8G19Dg" name="Enquirer" visibility="public">
+    <ownedAttribute xmi:type="uml:ExtensionEnd" xmi:id="_AnBsMNDzEeStq8QXCM-98w" name="listaBrincar" visibility="private" isReadOnly="true"/>
+    <ownedAttribute xmi:type="uml:ExtensionEnd" xmi:id="_Cjpw8NDzEeStq8QXCM-98w" name="listaAlimentar" visibility="private" isReadOnly="true"/>
+    <ownedAttribute xmi:type="uml:ExtensionEnd" xmi:id="_HijT4NDzEeStq8QXCM-98w" name="listaSkinship" visibility="private" isUnique="false" isReadOnly="true"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_P6WoQM9yEeSP_vYA8G19Dg" name="Action">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_XC_e4M9yEeSP_vYA8G19Dg" name="Name" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:ExtensionEnd" xmi:id="_Q9lgYNDyEeStq8QXCM-98w" name="point" isReadOnly="true"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_irrSwNDyEeStq8QXCM-98w" name="imprimeImagem">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_irrSwdDyEeStq8QXCM-98w" name="name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_qsNasNDyEeStq8QXCM-98w" name="Brincar">
+    <generalization xmi:type="uml:Generalization" xmi:id="_2pDAINDyEeStq8QXCM-98w" general="_P6WoQM9yEeSP_vYA8G19Dg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_sziTkNDyEeStq8QXCM-98w" name="alimentar">
+    <generalization xmi:type="uml:Generalization" xmi:id="_3KijoNDyEeStq8QXCM-98w" general="_P6WoQM9yEeSP_vYA8G19Dg"/>
+    <ownedAttribute xmi:type="uml:ExtensionEnd" xmi:id="_w_ogkNDyEeStq8QXCM-98w" name="saciedade"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ySt5ENDyEeStq8QXCM-98w" name="skinship">
+    <generalization xmi:type="uml:Generalization" xmi:id="_3jkHoNDyEeStq8QXCM-98w" general="_P6WoQM9yEeSP_vYA8G19Dg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_QrRy8NDzEeStq8QXCM-98w" name="Responder"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_YEwh8NDzEeStq8QXCM-98w" name="Bitmon">
+    <ownedAttribute xmi:type="uml:ExtensionEnd" xmi:id="_f20JANDzEeStq8QXCM-98w" name="vida"/>
+    <ownedAttribute xmi:type="uml:ExtensionEnd" xmi:id="_kQYxUNDzEeStq8QXCM-98w" name="tempoVida"/>
+    <ownedAttribute xmi:type="uml:ExtensionEnd" xmi:id="_noLMgNDzEeStq8QXCM-98w" name="saciedade"/>
+  </packagedElement>
+</uml:Model>
