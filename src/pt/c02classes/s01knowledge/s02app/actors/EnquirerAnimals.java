@@ -8,9 +8,17 @@ import java.util.HashMap;
 import pt.c02classes.s01knowledge.s01base.impl.BaseConhecimento;
 import pt.c02classes.s01knowledge.s01base.inter.IBaseConhecimento;
 import pt.c02classes.s01knowledge.s01base.inter.IDeclaracao;
+import pt.c02classes.s01knowledge.s01base.inter.IEnquirer;
 import pt.c02classes.s01knowledge.s01base.inter.IObjetoConhecimento;
+import pt.c02classes.s01knowledge.s01base.inter.IResponder;
 
-public class EnquirerAnimals extends EnquirerGeneric {
+public class EnquirerAnimals implements IEnquirer {
+
+	IResponder responder;
+	
+	public void connect(IResponder responder) {
+		this.responder = responder;
+	}
 	
 	public boolean discover() {
 		ArrayList<String> listaNomes;

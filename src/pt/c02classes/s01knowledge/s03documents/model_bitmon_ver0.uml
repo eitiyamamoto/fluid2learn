@@ -8,7 +8,7 @@
     <ownedAttribute xmi:type="uml:ExtensionEnd" xmi:id="_Cjpw8NDzEeStq8QXCM-98w" name="listaAlimentar" visibility="private" isReadOnly="true"/>
     <ownedAttribute xmi:type="uml:ExtensionEnd" xmi:id="_HijT4NDzEeStq8QXCM-98w" name="listaSkinship" visibility="private" isUnique="false" isReadOnly="true"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_P6WoQM9yEeSP_vYA8G19Dg" name="Action">
+  <packagedElement xmi:type="uml:Class" xmi:id="_P6WoQM9yEeSP_vYA8G19Dg" name="Action" visibility="protected">
     <ownedAttribute xmi:type="uml:Port" xmi:id="_XC_e4M9yEeSP_vYA8G19Dg" name="Name" visibility="public">
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
     </ownedAttribute>
@@ -22,17 +22,47 @@
   <packagedElement xmi:type="uml:Class" xmi:id="_qsNasNDyEeStq8QXCM-98w" name="Brincar">
     <generalization xmi:type="uml:Generalization" xmi:id="_2pDAINDyEeStq8QXCM-98w" general="_P6WoQM9yEeSP_vYA8G19Dg"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_sziTkNDyEeStq8QXCM-98w" name="alimentar">
+  <packagedElement xmi:type="uml:Class" xmi:id="_sziTkNDyEeStq8QXCM-98w" name="alimentar" visibility="public">
     <generalization xmi:type="uml:Generalization" xmi:id="_3KijoNDyEeStq8QXCM-98w" general="_P6WoQM9yEeSP_vYA8G19Dg"/>
     <ownedAttribute xmi:type="uml:ExtensionEnd" xmi:id="_w_ogkNDyEeStq8QXCM-98w" name="saciedade"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_ySt5ENDyEeStq8QXCM-98w" name="skinship">
     <generalization xmi:type="uml:Generalization" xmi:id="_3jkHoNDyEeStq8QXCM-98w" general="_P6WoQM9yEeSP_vYA8G19Dg"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_QrRy8NDzEeStq8QXCM-98w" name="Responder"/>
-  <packagedElement xmi:type="uml:Class" xmi:id="_YEwh8NDzEeStq8QXCM-98w" name="Bitmon">
+  <packagedElement xmi:type="uml:Class" xmi:id="_QrRy8NDzEeStq8QXCM-98w" name="Responder" visibility="protected"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_YEwh8NDzEeStq8QXCM-98w" name="Bitmon" visibility="public">
     <ownedAttribute xmi:type="uml:ExtensionEnd" xmi:id="_f20JANDzEeStq8QXCM-98w" name="vida"/>
     <ownedAttribute xmi:type="uml:ExtensionEnd" xmi:id="_kQYxUNDzEeStq8QXCM-98w" name="tempoVida"/>
     <ownedAttribute xmi:type="uml:ExtensionEnd" xmi:id="_noLMgNDzEeStq8QXCM-98w" name="saciedade"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Yl6E8NGoEeS5oqBKYQKN_w" visibility="public" memberEnd="_Yl6E8dGoEeS5oqBKYQKN_w _Yl3osNGoEeS5oqBKYQKN_w">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Yl3osNGoEeS5oqBKYQKN_w" name="responder" type="_QrRy8NDzEeStq8QXCM-98w" association="_Yl6E8NGoEeS5oqBKYQKN_w">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Yl3osdGoEeS5oqBKYQKN_w"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Yl4PwNGoEeS5oqBKYQKN_w" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Yl6E8dGoEeS5oqBKYQKN_w" name="enquirer" type="_DgRtMM9yEeSP_vYA8G19Dg" aggregation="shared" association="_Yl6E8NGoEeS5oqBKYQKN_w">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Yl6E8tGoEeS5oqBKYQKN_w" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Yl6E89GoEeS5oqBKYQKN_w" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_3Qb4kNGoEeS5oqBKYQKN_w" visibility="private" memberEnd="_3Qb4kdGoEeS5oqBKYQKN_w _3QZcUNGoEeS5oqBKYQKN_w">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_3Qb4kdGoEeS5oqBKYQKN_w" name="bitmon" type="_YEwh8NDzEeStq8QXCM-98w" aggregation="shared" association="_3Qb4kNGoEeS5oqBKYQKN_w">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3Qb4ktGoEeS5oqBKYQKN_w"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3Qb4k9GoEeS5oqBKYQKN_w" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_3QZcUNGoEeS5oqBKYQKN_w" name="responder" type="_QrRy8NDzEeStq8QXCM-98w" association="_3Qb4kNGoEeS5oqBKYQKN_w">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3QZcUdGoEeS5oqBKYQKN_w"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3QZcUtGoEeS5oqBKYQKN_w" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_XL_2QNGpEeS5oqBKYQKN_w" memberEnd="_XL_2QdGpEeS5oqBKYQKN_w _XL_PMNGpEeS5oqBKYQKN_w">
+    <ownedEnd xmi:type="uml:Property" xmi:id="_XL_2QdGpEeS5oqBKYQKN_w" name="bitmon" type="_YEwh8NDzEeStq8QXCM-98w" aggregation="shared" association="_XL_2QNGpEeS5oqBKYQKN_w">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XL_2QtGpEeS5oqBKYQKN_w" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XL_2Q9GpEeS5oqBKYQKN_w" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_XL_PMNGpEeS5oqBKYQKN_w" name="action" type="_P6WoQM9yEeSP_vYA8G19Dg" association="_XL_2QNGpEeS5oqBKYQKN_w">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XL_PMdGpEeS5oqBKYQKN_w"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XL_PMtGpEeS5oqBKYQKN_w" value="*"/>
+    </ownedEnd>
   </packagedElement>
 </uml:Model>
